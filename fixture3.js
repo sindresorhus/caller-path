@@ -1,7 +1,7 @@
 'use strict';
 
 function foo() {
-	return require('./')();
+	return require('./fixture2')();
 }
 
 module.exports = function () {

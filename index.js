@@ -1,6 +1,6 @@
 'use strict';
-var callsites = require('callsites');
+var callerCallsite = require('caller-callsite');
 
 module.exports = function () {
-	return callsites()[2].getFileName();
+	return callerCallsite().getFileName();
 };

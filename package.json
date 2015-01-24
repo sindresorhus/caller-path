@@ -1,19 +1,19 @@
 {
   "name": "caller-path",
   "version": "0.1.0",
-  "description": "Get the path of the caller module",
+  "description": "Get the path of the caller function",
   "license": "MIT",
   "repository": "sindresorhus/caller-path",
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "http://sindresorhus.com"
+    "url": "sindresorhus.com"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "node test.js"
   },
   "files": [
     "index.js"
@@ -33,9 +33,9 @@
     "file"
   ],
   "dependencies": {
-    "callsites": "^0.2.0"
+    "caller-callsite": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "*"
+    "ava": "0.0.4"
   }
 }

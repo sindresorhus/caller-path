@@ -1,8 +1,6 @@
 # caller-path [![Build Status](https://travis-ci.org/sindresorhus/caller-path.svg?branch=master)](https://travis-ci.org/sindresorhus/caller-path)
 
-> Get the path of the caller module
-
-You can't use [`module.parent`](http://nodejs.org/api/modules.html#modules_module_parent) as modules are cached and it will return the first caller module, not necessarily the current one.
+> Get the path of the caller function
 
 
 ## Install
