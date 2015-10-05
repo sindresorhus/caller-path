@@ -14,17 +14,17 @@ $ npm install --save caller-path
 
 ```js
 // foo.js
-var callerPath = require('caller-path');
+const callerPath = require('caller-path');
 
-module.exports = function () {
+module.exports = () => {
 	console.log(callerPath());
-	//=> /Users/sindresorhus/dev/unicorn/bar.js
+	//=> '/Users/sindresorhus/dev/unicorn/bar.js'
 }
 ```
 
 ```js
 // bar.js
-var foo = require('./foo');
+const foo = require('./foo');
 foo();
 ```
 
