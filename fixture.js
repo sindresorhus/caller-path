@@ -4,6 +4,4 @@ function foo() {
 	return require('./')();
 }
 
-module.exports = function () {
-	return foo();
-};
+module.exports = () => foo();

@@ -1,4 +1,2 @@
 'use strict';
-module.exports = function () {
-	return require('./fixture')();
-};
+module.exports = () => require('./fixture')();

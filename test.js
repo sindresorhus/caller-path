@@ -1,13 +1,11 @@
-'use strict';
-var path = require('path');
-var test = require('ava');
-var fixture = require('./fixture');
-var fixture2 = require('./fixture2');
-var fixture3 = require('./fixture3');
+import path from 'path';
+import test from 'ava';
+import fixture from './fixture';
+import fixture2 from './fixture2';
+import fixture3 from './fixture3';
 
-test(function (t) {
-	t.assert(path.basename(fixture()) === 'test.js');
-	t.assert(path.basename(fixture2()) === 'test.js');
-	t.assert(path.basename(fixture3()) === 'test.js');
-	t.end();
+test(t => {
+	t.is(path.basename(fixture()), 'test.js');
+	t.is(path.basename(fixture2()), 'test.js');
+	t.is(path.basename(fixture3()), 'test.js');
 });
