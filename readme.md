@@ -2,6 +2,8 @@
 
 > Get the path of the caller function
 
+You have to use `'use strict';` in your code for this module to work correctly.
+
 
 ## Install
 
