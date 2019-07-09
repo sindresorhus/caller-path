@@ -1,7 +1,7 @@
 'use strict';
 
-function foo() {
-	return require('./fixture2')();
+function foo({depth = 0} = {}) {
+	return require('./fixture2')({depth});
 }
 
-module.exports = () => foo();
+module.exports = ({depth = 0} = {}) => foo({depth});

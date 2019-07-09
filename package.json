@@ -10,13 +10,14 @@
     "url": "sindresorhus.com"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=8"
   },
   "scripts": {
-    "test": "xo && ava"
+    "test": "xo && ava && tsd"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "keywords": [
     "caller",
@@ -33,13 +34,11 @@
     "file"
   ],
   "dependencies": {
-    "caller-callsite": "^2.0.0"
+    "caller-callsite": "^4.1.0"
   },
   "devDependencies": {
-    "ava": "*",
-    "xo": "*"
-  },
-  "xo": {
-    "esnext": true
+    "ava": "^1.4.1",
+    "tsd": "^0.7.2",
+    "xo": "^0.24.0"
   }
 }
