@@ -39,12 +39,12 @@ declare namespace callerPath {
 Get the path of the caller function.
 
 @example
-```js
+```
 // foo.ts
-const callerPath = require('caller-path');
+import callerPath = require('caller-path');
 
 export default () => {
-	console.log(callerPath();
+	console.log(callerPath());
 	//=> '/Users/sindresorhus/dev/unicorn/bar.ts'
 }
 
