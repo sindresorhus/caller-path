@@ -8,7 +8,7 @@ declare namespace callerPath {
 		@example
 		```
 		// foo.ts
-		const callerPath = require('caller-path');
+		import callerPath = require('caller-path');
 
 		module.exports = () => {
 			console.log(callerPath();
