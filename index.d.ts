@@ -11,11 +11,11 @@ declare namespace callerPath {
 		import callerPath = require('caller-path');
 
 		module.exports = () => {
-			console.log(callerPath();
+			console.log(callerPath());
 			//=> '/Users/sindresorhus/dev/unicorn/foobar.ts'
-			console.log(callerPath({depth: 1});
+			console.log(callerPath({depth: 1}));
 			//=> '/Users/sindresorhus/dev/unicorn/bar.ts'
-			console.log(callerPath({depth: 2});
+			console.log(callerPath({depth: 2}));
 			//=> '/Users/sindresorhus/dev/unicorn/foo.ts'
 		}
 
@@ -52,6 +52,7 @@ export default () => {
 import foo from './foo';
 foo();
 ```
+If the caller's [callsite](https://github.com/sindresorhus/callsites#api) object `getFileName` was not defined, it will return `undefined`.
 */
 declare function callerPath(options?: callerPath.Options): string | undefined;
 
