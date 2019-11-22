@@ -1,7 +1,7 @@
 'use strict';
 
-function foo() {
-	return require('./')();
+function foo({depth = 0} = {}) {
+	return require('.')({depth});
 }
 
-module.exports = () => foo();
+module.exports = ({depth = 0} = {}) => foo({depth});
