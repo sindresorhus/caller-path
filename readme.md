@@ -2,15 +2,13 @@
 
 > Get the path of the caller function
 
-You have to use `'use strict';` in your code for this module to work correctly.
-
+**Important:** You have to use `'use strict';` in your code for this module to work correctly, or make sure the module is an ESM module, which is implicitly strict.
 
 ## Install
 
 ```
 $ npm install caller-path
 ```
-
 
 ## Usage
 
@@ -30,7 +28,7 @@ const foo = require('./foo');
 foo();
 ```
 
-If the caller's [callsite](https://github.com/sindresorhus/callsites#api) object `getFileName` was not defined, it will return `undefined`.
+If the caller's [callsite](https://github.com/sindresorhus/callsites#api) object `getFileName` was not defined for some reason, it will return `undefined`.
 
 ## API
 
@@ -40,7 +38,7 @@ Get the path of the caller function.
 
 ##### depth
 
-Type: `number`<br>
+Type: `number`\
 Default: `0`
 
 The caller path depth, meaning how many levels we follow back on the stack trace.

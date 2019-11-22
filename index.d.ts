@@ -38,6 +38,8 @@ declare namespace callerPath {
 /**
 Get the path of the caller function.
 
+If the caller's [callsite](https://github.com/sindresorhus/callsites#api) object `getFileName` was not defined for some reason, it will return `undefined`.
+
 @example
 ```
 // foo.ts
@@ -52,7 +54,6 @@ export default () => {
 import foo from './foo';
 foo();
 ```
-If the caller's [callsite](https://github.com/sindresorhus/callsites#api) object `getFileName` was not defined, it will return `undefined`.
 */
 declare function callerPath(options?: callerPath.Options): string | undefined;
 
