@@ -8,7 +8,7 @@ You have to use `'use strict';` in your code for this module to work correctly.
 ## Install
 
 ```
-$ npm install --save caller-path
+$ npm install caller-path
 ```
 
 
@@ -75,3 +75,15 @@ module.exports = () => {
 const bar = require('./bar');
 bar();
 ```
+
+---
+
+<div align="center">
+	<b>
+		<a href="https://tidelift.com/subscription/pkg/npm-caller-path?utm_source=npm-caller-path&utm_medium=referral&utm_campaign=readme">Get professional support for this package with a Tidelift subscription</a>
+	</b>
+	<br>
+	<sub>
+		Tidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.
+	</sub>
+</div>
