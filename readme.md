@@ -1,4 +1,4 @@
-# caller-path [![Build Status](https://travis-ci.org/sindresorhus/caller-path.svg?branch=master)](https://travis-ci.org/sindresorhus/caller-path)
+# caller-path
 
 > Get the path of the caller function
 
