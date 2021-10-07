@@ -4,8 +4,8 @@
 
 ## Install
 
-```
-$ npm install caller-path
+```sh
+npm install caller-path
 ```
 
 ## Usage

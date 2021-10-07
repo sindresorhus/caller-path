@@ -4,10 +4,11 @@
 	"description": "Get the path of the caller function",
 	"license": "MIT",
 	"repository": "sindresorhus/caller-path",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
 	"type": "module",
 	"exports": "./index.js",
