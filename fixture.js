@@ -1,7 +1,9 @@
-'use strict';
+import callerPath from './index.js';
 
 function foo({depth = 0} = {}) {
-	return require('.')({depth});
+	return callerPath({depth});
 }
 
-module.exports = ({depth = 0} = {}) => foo({depth});
+export default function fixture({depth = 0} = {}) {
+	return foo({depth});
+}

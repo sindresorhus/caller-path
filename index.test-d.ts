@@ -1,5 +1,5 @@
 import {expectType, expectError} from 'tsd';
-import callerPath = require('.');
+import callerPath from './index.js';
 
 expectType<string | undefined>(callerPath());
 expectType<string | undefined>(callerPath({depth: 1}));

@@ -2,8 +2,6 @@
 
 > Get the path of the caller function
 
-**Important:** You have to use `'use strict';` in your code for this module to work correctly, or make sure the module is an ESM module, which is implicitly strict.
-
 ## Install
 
 ```
@@ -14,9 +12,9 @@ $ npm install caller-path
 
 ```js
 // foo.js
-const callerPath = require('caller-path');
+import callerPath from 'caller-path';
 
-module.exports = () => {
+export default function foo() {
 	console.log(callerPath());
 	//=> '/Users/sindresorhus/dev/unicorn/bar.js'
 }
@@ -24,7 +22,7 @@ module.exports = () => {
 
 ```js
 // bar.js
-const foo = require('./foo');
+import foo from './foo.js';
 foo();
 ```
 
@@ -47,9 +45,9 @@ For example:
 
 ```js
 // foo.js
-const callerPath = require('caller-path');
+import callerPath from 'caller-path';
 
-module.exports = () => {
+export default function foo() {
 	console.log(callerPath());
 	//=> '/Users/sindresorhus/dev/unicorn/foobar.js'
 	console.log(callerPath({depth: 1}));
@@ -61,16 +59,16 @@ module.exports = () => {
 
 ```js
 // bar.js
-const foo = require('./foo');
+import foo from './foo.js';
 
-module.exports = () => {
+export default function bar() {
 	foo();
 }
 ```
 
 ```js
 // foobar.js
-const bar = require('./bar');
+import bar from './bar.js';
 bar();
 ```
 

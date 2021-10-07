@@ -1,38 +1,36 @@
-declare namespace callerPath {
-	interface Options {
-		/**
-		The caller path depth, meaning how many levels we follow back on the stack trace.
+export interface Options {
+	/**
+	The caller path depth, meaning how many levels we follow back on the stack trace.
 
-		@default 0
+	@default 0
 
-		@example
-		```
-		// foo.ts
-		import callerPath = require('caller-path');
+	@example
+	```
+	// foo.ts
+	import callerPath from 'caller-path';
 
-		module.exports = () => {
-			console.log(callerPath());
-			//=> '/Users/sindresorhus/dev/unicorn/foobar.ts'
-			console.log(callerPath({depth: 1}));
-			//=> '/Users/sindresorhus/dev/unicorn/bar.ts'
-			console.log(callerPath({depth: 2}));
-			//=> '/Users/sindresorhus/dev/unicorn/foo.ts'
-		}
-
-		// bar.ts
-		import foo = require('./foo');
-
-		module.exports = () => {
-			foo();
-		}
-
-		// foobar.ts
-		import bar = require('./bar');
-		bar();
-		```
-		*/
-		readonly depth?: number;
+	export default function foo() {
+		console.log(callerPath());
+		//=> '/Users/sindresorhus/dev/unicorn/foobar.ts'
+		console.log(callerPath({depth: 1}));
+		//=> '/Users/sindresorhus/dev/unicorn/bar.ts'
+		console.log(callerPath({depth: 2}));
+		//=> '/Users/sindresorhus/dev/unicorn/foo.ts'
 	}
+
+	// bar.ts
+	import foo from './foo.js';
+
+	export default function bar() => {
+		foo();
+	}
+
+	// foobar.ts
+	import bar from './bar.js';
+	bar();
+	```
+	*/
+	readonly depth?: number;
 }
 
 /**
@@ -43,18 +41,17 @@ If the caller's [callsite](https://github.com/sindresorhus/callsites#api) object
 @example
 ```
 // foo.ts
-import callerPath = require('caller-path');
+import callerPath from 'caller-path';
 
-export default () => {
+export default function foo() {
 	console.log(callerPath());
 	//=> '/Users/sindresorhus/dev/unicorn/bar.ts'
 }
 
 // bar.ts
-import foo from './foo';
+import foo from './foo.js';
 foo();
 ```
 */
-declare function callerPath(options?: callerPath.Options): string | undefined;
+export default function callerPath(options?: Options): string | undefined;
 
-export = callerPath;

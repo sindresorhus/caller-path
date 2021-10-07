@@ -1,2 +1,5 @@
-'use strict';
-module.exports = ({depth = 0} = {}) => require('./fixture')({depth});
+import fixture from './fixture.js';
+
+export default function fixture2({depth = 0} = {}) {
+	return fixture({depth});
+}
