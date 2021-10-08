@@ -1,7 +1,6 @@
-'use strict';
-const callerCallsite = require('caller-callsite');
+import callerCallsite from 'caller-callsite';
 
-module.exports = ({depth = 0} = {}) => {
+export default function callerpath({depth = 0} = {}) {
 	const callsite = callerCallsite({depth});
 	return callsite && callsite.getFileName();
-};
+}

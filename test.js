@@ -1,8 +1,8 @@
-import path from 'path';
+import path from 'node:path';
 import test from 'ava';
-import fixture from './fixture';
-import fixture2 from './fixture2';
-import fixture3 from './fixture3';
+import fixture from './fixture.js';
+import fixture2 from './fixture2.js';
+import fixture3 from './fixture3.js';
 
 test('main', t => {
 	t.is(path.basename(fixture()), 'test.js');
